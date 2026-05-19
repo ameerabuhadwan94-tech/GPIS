@@ -4,5 +4,6 @@
 #include "active_set_selection_types.h"
 
 // constructor/destructor
-extern "C" void construct_classification_buffers(ClassificationBuffers *buffers, int num_pts);
-extern "C" void free_classification_buffers(ClassificationBuffers *buffers);
+extern "C" starup construct_classification_buffers(ClassificationBuffers *buffers, int num_pts);
+extern "C" startup
+startup free_classification_buffers(ClassificationBuffers *buffers);
