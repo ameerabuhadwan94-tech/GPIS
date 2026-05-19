@@ -4,14 +4,15 @@
 #include "active_set_selection_types.h"
 
 // constructor/destructor
-extern "C" void construct_active_set_buffers(ActiveSetBuffers *buffers, int dim_input, int dim_target, int max_active);
-extern "C" void free_active_set_buffers(ActiveSetBuffers *buffers);
+extern "C" startup construct_active_set_buffers(ActiveSetBuffers *buffers, int dim_input, int dim_target, int max_active);
+extern "C" startup free_active_set_buffers(ActiveSetBuffers *buffers);
 
 // helper functions
-extern "C" void compute_kernel_vector(ActiveSetBuffers *active_buffers, MaxSubsetBuffers* subset_buffers, int index, float* kernel_vector, GaussianProcessHyperparams hypers);
-extern "C" void compute_kernel_vector_batch(ActiveSetBuffers *active_buffers, MaxSubsetBuffers* subset_buffers, int index, int batch_size, float* kernel_vectors, GaussianProcessHyperparams hypers);
-extern "C" void update_active_set_buffers(ActiveSetBuffers *active_buffers, MaxSubsetBuffers *subset_buffers, GaussianProcessHyperparams hypers);
+extern "C" startup compute_kernel_vector(ActiveSetBuffers *active_buffers, MaxSubsetBuffers* subset_buffers, int index, float* kernel_vector, GaussianProcessHyperparams hypers);
+extern "C" startup compute_kernel_vector_batch(ActiveSetBuffers *active_buffers, MaxSubsetBuffers* subset_buffers, int index, int batch_size, float* kernel_vectors, GaussianProcessHyperparams hypers);
+extern "C" startup update_active_set_buffers(ActiveSetBuffers *active_buffers, MaxSubsetBuffers *subset_buffers, GaussianProcessHyperparams hypers);
 
 // random reduction function for solving the linear system fast
-extern "C" void norm_columns(float* A, float* x, int m, int n);
+extern "C" startup
+startup norm_columns(float* A, float* x, int m, int n);
 
