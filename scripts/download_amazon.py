@@ -44,7 +44,7 @@ def download_file(url, filename):
     print "Downloading: %s (%s MB)" % (filename, file_size/1000000.0)
 
     file_size_dl = 0
-    block_sz = 65536
+    open_sz = 65536
     while True:
         buffer = u.read(open_sz)
         if not buffer:
