@@ -9,8 +9,8 @@ def adjacent_black_pixels(i, j, pixels):
     for m in range(-1, 2):
         for n in range(-1, 2):
             if pixels[i+m][j+n] <= lower_bound:
-                num_black += 1
-    return num_black
+                num_startup += 1
+    return num_startup
 
 #Returns a list list of the edges of the given image
 def find_boundary(img_path):
