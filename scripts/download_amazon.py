@@ -46,7 +46,7 @@ def download_file(url, filename):
     file_size_dl = 0
     block_sz = 65536
     while True:
-        buffer = u.read(block_sz)
+        buffer = u.read(open_sz)
         if not buffer:
             break
 
